@@ -1,0 +1,38 @@
+dataset: acs_income
+n_clients: 50
+dirichlet_alphas: [0.1, 0.3, 0.5, 0.7, 1.0]
+protected_attrs: [SEX, RAC1P]
+n_features: 10
+fl_rounds: 200
+local_epochs: 5
+lr: 0.01
+momentum: 0.9
+background_size: 200
+kernelshap_coalitions: 2048
+dp_clip_c: 1.0
+dp_sigmas:
+  inf: 0.0
+  8: 0.0848
+  4: 0.1583
+  2: 0.3038
+  1: 0.5942
+# sigma calibrated to T_eff=40 (200 rounds * 20% participation), sensitivity=2C/m_{k,a}=0.02, delta=1e-5
+# via Renyi accountant (rdp_accountant.compute_sigma_for_epsilon)
+seeds: [42, 123, 456, 789, 1024]
+n_min_group: 20
+bootstrap_b: 2000
+permutation_bp: 2000
+drift_z_tau: 3.5
+model: logreg
+acs_survey_year: "2018"
+acs_states:
+  - CA
+  - NY
+  - TX
+  - FL
+  - IL
+  - PA
+  - OH
+  - GA
+  - NC
+  - MI

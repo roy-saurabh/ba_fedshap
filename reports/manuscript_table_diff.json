@@ -1,0 +1,609 @@
+{
+  "generated_at": "2026-05-22",
+  "pipeline_run": false,
+  "reason_not_run": "Pinned environment (Python 3.10.12, torch 2.1.0, shap 0.44.0, flwr 1.5.0) not available on this machine. Full run requires A100 GPU.",
+  "summary": {
+    "total_values": 68,
+    "MATCH_EXACT": 0,
+    "MATCH_ROUNDED": 0,
+    "MISMATCH": 0,
+    "MANUSCRIPT_VALUE_MISSING": 0,
+    "GENERATED_VALUE_MISSING": 68
+  },
+  "notes": [
+    "All generated values are MISSING because the full pipeline has not been executed.",
+    "The pipeline requires torch==2.1.0, shap==0.44.0, flwr==1.5.0 on Python 3.10.12.",
+    "Fisher z CI discrepancy for Table VIII noted in statistical_validation.md.",
+    "DP sigma values in configs have been corrected; Table VII results will differ if re-run.",
+    "Adult N differs: manuscript says 48842 (raw UCI), code produces 45222 after dropna."
+  ],
+  "values": [
+    {
+      "table": "IV",
+      "row": "Local SHAP",
+      "col": "L1 to global mean",
+      "manuscript_value": "0.187",
+      "manuscript_std": "0.041",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "Local SHAP",
+      "col": "Spearman rho",
+      "manuscript_value": "0.721",
+      "manuscript_std": "0.063",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "Local SHAP",
+      "col": "|ADI_method - ADI_oracle|",
+      "manuscript_value": "0.062",
+      "manuscript_ci": "[.049,.075]",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "Local SHAP",
+      "col": "95% CI covers oracle",
+      "manuscript_value": "0.32",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "Naive aggregated SHAP",
+      "col": "L1 to global mean",
+      "manuscript_value": "0.153",
+      "manuscript_std": "0.038",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "Naive aggregated SHAP",
+      "col": "Spearman rho",
+      "manuscript_value": "0.769",
+      "manuscript_std": "0.057",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "Naive aggregated SHAP",
+      "col": "|ADI_method - ADI_oracle|",
+      "manuscript_value": "0.049",
+      "manuscript_ci": "[.039,.060]",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "Naive aggregated SHAP",
+      "col": "95% CI covers oracle",
+      "manuscript_value": "0.48",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "Shared-background SHAP",
+      "col": "L1 to global mean",
+      "manuscript_value": "0.097",
+      "manuscript_std": "0.026",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "Shared-background SHAP",
+      "col": "Spearman rho",
+      "manuscript_value": "0.852",
+      "manuscript_std": "0.043",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "Shared-background SHAP",
+      "col": "|ADI_method - ADI_oracle|",
+      "manuscript_value": "0.024",
+      "manuscript_ci": "[.018,.031]",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "Shared-background SHAP",
+      "col": "95% CI covers oracle",
+      "manuscript_value": "0.76",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "k-means background SHAP",
+      "col": "L1 to global mean",
+      "manuscript_value": "0.089",
+      "manuscript_std": "0.024",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "k-means background SHAP",
+      "col": "Spearman rho",
+      "manuscript_value": "0.863",
+      "manuscript_std": "0.041",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "k-means background SHAP",
+      "col": "|ADI_method - ADI_oracle|",
+      "manuscript_value": "0.021",
+      "manuscript_ci": "[.016,.028]",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "k-means background SHAP",
+      "col": "95% CI covers oracle",
+      "manuscript_value": "0.80",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "Gradient-based federated attr.",
+      "col": "L1 to global mean",
+      "manuscript_value": "0.104",
+      "manuscript_std": "0.027",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "Gradient-based federated attr.",
+      "col": "Spearman rho",
+      "manuscript_value": "0.843",
+      "manuscript_std": "0.045",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "Gradient-based federated attr.",
+      "col": "|ADI_method - ADI_oracle|",
+      "manuscript_value": "0.027",
+      "manuscript_ci": "[.020,.034]",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "Gradient-based federated attr.",
+      "col": "95% CI covers oracle",
+      "manuscript_value": "0.72",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "BA-FedSHAP (eps=inf)",
+      "col": "L1 to global mean",
+      "manuscript_value": "0.061",
+      "manuscript_std": "0.017",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "BA-FedSHAP (eps=inf)",
+      "col": "Spearman rho",
+      "manuscript_value": "0.921",
+      "manuscript_std": "0.029",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "BA-FedSHAP (eps=inf)",
+      "col": "|ADI_method - ADI_oracle|",
+      "manuscript_value": "0.011",
+      "manuscript_ci": "[.007,.016]",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "BA-FedSHAP (eps=inf)",
+      "col": "95% CI covers oracle",
+      "manuscript_value": "0.92",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "BA-FedSHAP (eps=4)",
+      "col": "L1 to global mean",
+      "manuscript_value": "0.074",
+      "manuscript_std": "0.021",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "BA-FedSHAP (eps=4)",
+      "col": "Spearman rho",
+      "manuscript_value": "0.904",
+      "manuscript_std": "0.034",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "BA-FedSHAP (eps=1)",
+      "col": "L1 to global mean",
+      "manuscript_value": "0.098",
+      "manuscript_std": "0.028",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IV",
+      "row": "BA-FedSHAP (eps=1)",
+      "col": "Spearman rho",
+      "manuscript_value": "0.879",
+      "manuscript_std": "0.041",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "V",
+      "row": "Local SHAP",
+      "col": "Deletion AUC",
+      "manuscript_value": "0.412",
+      "manuscript_std": "0.031",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "V",
+      "row": "Local SHAP",
+      "col": "Insertion AUC",
+      "manuscript_value": "0.623",
+      "manuscript_std": "0.044",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "V",
+      "row": "Local SHAP",
+      "col": "Param rand cos sim",
+      "manuscript_value": "0.58",
+      "manuscript_std": "0.07",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "V",
+      "row": "Local SHAP",
+      "col": "Label rand Spearman",
+      "manuscript_value": "0.34",
+      "manuscript_std": "0.06",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "V",
+      "row": "BA-FedSHAP (Q_pool, eps=inf)",
+      "col": "Deletion AUC",
+      "manuscript_value": "0.334",
+      "manuscript_std": "0.025",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "V",
+      "row": "BA-FedSHAP (Q_pool, eps=inf)",
+      "col": "Insertion AUC",
+      "manuscript_value": "0.694",
+      "manuscript_std": "0.038",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "V",
+      "row": "BA-FedSHAP (Q_pool, eps=inf)",
+      "col": "Param rand cos sim",
+      "manuscript_value": "0.31",
+      "manuscript_std": "0.05",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "V",
+      "row": "BA-FedSHAP (Q_pool, eps=inf)",
+      "col": "Label rand Spearman",
+      "manuscript_value": "0.18",
+      "manuscript_std": "0.04",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VI",
+      "row": "(A) Full BA-FedSHAP (eps=inf)",
+      "col": "L1",
+      "manuscript_value": "0.061",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VI",
+      "row": "(A) Full BA-FedSHAP (eps=inf)",
+      "col": "Spearman rho",
+      "manuscript_value": "0.921",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VI",
+      "row": "(A) Full BA-FedSHAP (eps=inf)",
+      "col": "|ADI - oracle|",
+      "manuscript_value": "0.011",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VI",
+      "row": "(A) Full BA-FedSHAP (eps=inf)",
+      "col": "Deletion AUC",
+      "manuscript_value": "0.334",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VI",
+      "row": "(B) - group conditioning",
+      "col": "|ADI - oracle|",
+      "manuscript_value": "0.029",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VI",
+      "row": "(C) - robust aggregation",
+      "col": "|ADI - oracle|",
+      "manuscript_value": "0.038",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VI",
+      "row": "(E) Naive (no shared background)",
+      "col": "|ADI - oracle|",
+      "manuscript_value": "0.046",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VII",
+      "row": "eps=inf",
+      "col": "L1",
+      "manuscript_value": "0.061",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VII",
+      "row": "eps=8",
+      "col": "L1",
+      "manuscript_value": "0.066",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VII",
+      "row": "eps=4",
+      "col": "L1",
+      "manuscript_value": "0.074",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VII",
+      "row": "eps=2",
+      "col": "L1",
+      "manuscript_value": "0.084",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VII",
+      "row": "eps=1",
+      "col": "L1",
+      "manuscript_value": "0.098",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VII",
+      "row": "eps=inf",
+      "col": "95% CI covers oracle",
+      "manuscript_value": "0.92",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VII",
+      "row": "eps=1",
+      "col": "95% CI covers oracle",
+      "manuscript_value": "0.80",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VIII",
+      "row": "Adult",
+      "col": "r(ADI^pool, DPD)",
+      "manuscript_value": "0.71",
+      "manuscript_ci": "[0.52,0.83]",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VIII",
+      "row": "Adult",
+      "col": "r(ADI^pool, EOD)",
+      "manuscript_value": "0.64",
+      "manuscript_ci": "[0.43,0.79]",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VIII",
+      "row": "German Credit",
+      "col": "r(ADI^pool, DPD)",
+      "manuscript_value": "0.74",
+      "manuscript_ci": "[0.57,0.85]",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VIII",
+      "row": "COMPAS",
+      "col": "r(ADI^pool, DPD)",
+      "manuscript_value": "0.61",
+      "manuscript_ci": "[0.38,0.77]",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VIII",
+      "row": "Bank Marketing",
+      "col": "r(ADI^pool, DPD)",
+      "manuscript_value": "0.33",
+      "manuscript_ci": "[0.04,0.56]",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "VIII",
+      "row": "ACSIncome",
+      "col": "r(ADI^pool, DPD)",
+      "manuscript_value": "0.68",
+      "manuscript_ci": "[0.48,0.81]",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IX",
+      "row": "Adult / LogReg",
+      "col": "L_hat",
+      "manuscript_value": "0.41",
+      "manuscript_std": "0.03",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IX",
+      "row": "Adult / MLP",
+      "col": "L_hat",
+      "manuscript_value": "1.19",
+      "manuscript_std": "0.09",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IX",
+      "row": "German Credit / LogReg",
+      "col": "L_hat",
+      "manuscript_value": "0.38",
+      "manuscript_std": "0.03",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IX",
+      "row": "COMPAS / LogReg",
+      "col": "L_hat",
+      "manuscript_value": "0.44",
+      "manuscript_std": "0.04",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IX",
+      "row": "Bank Marketing / LogReg",
+      "col": "L_hat",
+      "manuscript_value": "0.39",
+      "manuscript_std": "0.03",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IX",
+      "row": "ACSIncome / LogReg",
+      "col": "L_hat",
+      "manuscript_value": "0.36",
+      "manuscript_std": "0.03",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "IX",
+      "row": "ACSPublicCoverage / LogReg",
+      "col": "L_hat",
+      "manuscript_value": "0.40",
+      "manuscript_std": "0.04",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "X",
+      "row": "Background construction (one-time)",
+      "col": "BA-FedSHAP",
+      "manuscript_value": "4.1 s",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "X",
+      "row": "Client-side SHAP per round (per client)",
+      "col": "BA-FedSHAP",
+      "manuscript_value": "21.4 s",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "X",
+      "row": "DP clipping + noise (per client)",
+      "col": "BA-FedSHAP",
+      "manuscript_value": "0.04 s",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "X",
+      "row": "Server-side robust aggregation",
+      "col": "BA-FedSHAP",
+      "manuscript_value": "0.31 s",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    },
+    {
+      "table": "X",
+      "row": "End-to-end (200 rounds, 50 clients)",
+      "col": "BA-FedSHAP",
+      "manuscript_value": "252 min",
+      "generated_value": null,
+      "status": "GENERATED_VALUE_MISSING"
+    }
+  ]
+}

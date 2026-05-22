@@ -1,0 +1,5 @@
+Dataset / Model,d,L̂ mean,n_obs
+Adult / LogReg,14,1.37 ± 0.17,3
+Compas / LogReg,13,0.41 ± 0.03,3
+German / LogReg,20,2.33 ± 0.29,3
+Bank / LogReg,17,0.62 ± 0.23,3

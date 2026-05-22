@@ -1,0 +1,6 @@
+Configuration,ADI_norm,Deletion AUC ↓,n_obs
+(A) Full BA-FedSHAP (ε=∞),10.049 ± 0.000,0.405 ± 0.000,1
+(D) − drift Z-test,10.049 ± 0.000,0.405 ± 0.000,1
+(B) − group conditioning,11.734 ± 0.000,0.405 ± 0.000,1
+(H) + DP ε=4,122.540 ± 0.000,0.405 ± 0.000,1
+(I) + DP ε=1,93.244 ± 0.000,0.405 ± 0.000,1
