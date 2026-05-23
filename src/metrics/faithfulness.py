@@ -15,6 +15,13 @@ import numpy as np
 logger = logging.getLogger(__name__)
 
 
+def _trapz_compat(values: list, dx: float) -> float:
+    """Trapezoidal integration compatible with NumPy < 2.0 and >= 2.0."""
+    if hasattr(np, "trapezoid"):
+        return np.trapezoid(values, dx=dx)
+    return np.trapz(values, dx=dx)
+
+
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
@@ -89,7 +96,7 @@ def deletion_auc(
         scores.append(float(proba.mean()))
 
     # AUC via trapezoidal rule, normalised by range
-    auc = float(np.trapezoid(scores, dx=1.0 / n_steps))
+    auc = float(_trapz_compat(scores, dx=1.0 / n_steps))
     logger.debug("Deletion AUC = %.4f", auc)
     return auc
 
@@ -132,7 +139,7 @@ def insertion_auc(
         proba = model.predict_proba(x_mod)[:, 1]
         scores.append(float(proba.mean()))
 
-    auc = float(np.trapezoid(scores, dx=1.0 / n_steps))
+    auc = float(_trapz_compat(scores, dx=1.0 / n_steps))
     logger.debug("Insertion AUC = %.4f", auc)
     return auc
 

@@ -1,0 +1,27 @@
+# SoftwareX low-compute COMPAS config
+# Reproduces manuscript Table 1 in ~2 CPU-hours on a standard laptop.
+# Full-scale config: configs/compas.yaml (n_clients=50, fl_rounds=200, coalitions=2048)
+dataset: compas
+n_clients: 10
+dirichlet_alphas: [0.1, 0.5, 1.0]
+protected_attrs: [sex, race]
+n_features: 13
+fl_rounds: 10
+local_epochs: 5
+lr: 0.01
+momentum: 0.9
+background_size: 200
+kernelshap_coalitions: 64
+dp_clip_c: 1.0
+dp_sigmas:
+  inf: 0.0
+  8: 0.0848
+  4: 0.1583
+  2: 0.3038
+  1: 0.5942
+seeds: [42, 123, 456, 789, 1024]
+n_min_group: 20
+bootstrap_b: 500
+permutation_bp: 500
+drift_z_tau: 3.5
+model: logreg

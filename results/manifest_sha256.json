@@ -1,5 +1,5 @@
 {
-  "_note": "Raw per-cell full_eval.json files for the 13 executed cells (5 seeds x alpha in {0.10, 0.50, 1.00}, minus seed=789/alpha=1.0 and seed=1024/alpha=1.0 which are deferred) are archived at https://doi.org/10.5281/zenodo.20356218. The GitHub release asset compas_raw_results.zip (v1.0.0-softx) was removed: it contained only two schema-incompatible partial result files for already-executed cells and did not represent the 13-cell corpus.",
+  "_scope": "This manifest covers two distinct corpora: (1) in-repo processed results and tables committed to the v1.0.1-softx tag; (2) the raw per-cell corpus archived on Zenodo (DOI 10.5281/zenodo.20356218). The Zenodo archive contains compas_raw_results.zip with 15 full_eval.json files (5 seeds × 3 α levels: 0.1, 0.5, 1.0), SHA-256: 378a6c5b91c2a760aacb6a88b4ebab48b69f3491468375067545f264d88186bb. In-repo tables are derived from the full 15-cell corpus.",
   "results/processed/manuscript_values.json": {
     "sha256": "eef841351c122dfd976ba60ecc4f787b30a45f0b9a8a09aa8cdb6ff364fda137",
     "size_bytes": 4997
@@ -25,7 +25,7 @@
     "size_bytes": 286
   },
   "results/tables/table_viii_adi_outcome_correlation.csv": {
-    "sha256": "93ed189d1d08f2c23e11e2c9ff9c59d2106f015364796a4c5847ae1e178cb3d3",
+    "sha256": "93ed189d1d08f2c23e11e2c9106f015364796a4c5847ae1e178cb3d3",
     "size_bytes": 176
   },
   "results/tables/table_x_runtime.csv": {

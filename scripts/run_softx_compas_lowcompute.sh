@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Reproduces all 15 cells (5 seeds × 3 α) from the SoftwareX manuscript Table 1.
+# Runtime: ~2 CPU-hours on a standard laptop.
+# Output: results/raw/<seed>_<alpha>/full_eval.json
+
+for SEED in 42 123 456 789 1024; do
+  for ALPHA in 0.1 0.5 1.0; do
+    echo "==> seed=${SEED} alpha=${ALPHA}"
+    python scripts/run_full_eval.py \
+      --config configs/compas_lowcompute_softx.yaml \
+      --seed "$SEED" \
+      --alpha "$ALPHA" \
+      --results-dir results/raw \
+      --n-clients 10 \
+      --fl-rounds 10 \
+      --coalitions 64 \
+      --background-size 200 \
+      --skip-sanity \
+      --skip-lipschitz
+  done
+done
+
+echo "Done. Aggregate with: python scripts/make_tables.py --results-dir results/raw --output results/tables/"
