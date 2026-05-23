@@ -1,0 +1,30 @@
+{
+  "title": "BA-FedSHAP: Background-Anchored Federated Shapley Attributions for Auditable AI",
+  "description": "Reference implementation and raw experimental results for the SoftwareX article: BA-FedSHAP — Background-Anchored Federated Shapley Attributions for Auditable AI. Includes the full BA-FedSHAP protocol (Algorithms 1–3), six comparison baselines, faithfulness metrics, RDP privacy accounting, and reproducible results on COMPAS, Adult, German Credit, Bank Marketing, ACSIncome, and ACSPublicCoverage.",
+  "creators": [
+    {
+      "name": "Saurabh, Roy",
+      "affiliation": ""
+    }
+  ],
+  "keywords": [
+    "federated learning",
+    "SHAP",
+    "differential privacy",
+    "fairness",
+    "explainability",
+    "algorithmic auditing",
+    "machine learning"
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "10.1016/j.softx.2025.XXXXXX",
+      "scheme": "doi"
+    }
+  ],
+  "version": "1.0.0"
+}

@@ -12,7 +12,10 @@ build/
 venv/
 env/
 
-# Data and large results (raw JSON files tracked separately)
+# Raw dataset files (downloaded, not tracked)
+data/
+
+# Large binary result formats
 *.h5
 *.pkl
 *.npy
