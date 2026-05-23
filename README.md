@@ -304,9 +304,16 @@ These were fixed before any experiments were run. Do not change them for reprodu
 
 Source file hashes are documented in `reports/hash_manifest_report.md`.
 
-After a full pipeline run, result file hashes are stored in:
-- `results/manifest_sha256.json` — machine-readable
-- `results/manifest_sha256.txt` — human-readable
+`results/manifest_sha256.json` covers the files currently present in the repo:
+`results/processed/manuscript_values.json` and the seven table CSVs.
+Raw per-cell `full_eval.json` files for the 13 executed cells are archived on
+Zenodo at https://doi.org/10.5281/zenodo.20356218.
+
+**Note on compas_raw_results.zip:** The GitHub release asset
+(`v1.0.0-softx/compas_raw_results.zip`) has been removed. It contained only
+two schema-incompatible partial result files for already-executed cells
+(seed=789 and seed=1024 at α=0.50) and did not represent the 13-cell corpus.
+The authoritative raw-results archive is the Zenodo deposit above.
 
 To regenerate the result manifest after a full run:
 
@@ -430,3 +437,12 @@ For reproducibility questions related to this submission, see the audit reports 
 
 Pre-registered seeds, sigma correction rationale, and all audit findings are documented
 in the reports directory and must be disclosed in the manuscript's reproducibility statement.
+
+**Zenodo archive:** https://doi.org/10.5281/zenodo.20356218
+
+To cite this software:
+
+```
+Roy Saurabh. BA-FedSHAP: Background-Anchored Federated Shapley Attributions for Auditable AI.
+Zenodo, 2025. https://doi.org/10.5281/zenodo.20356218
+```

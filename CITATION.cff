@@ -9,6 +9,10 @@ authors:
     given-names: Roy
 license: MIT
 repository-code: "https://github.com/roy-saurabh/ba_fedshap"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.20356218
+    description: Zenodo software archive
 keywords:
   - federated learning
   - SHAP

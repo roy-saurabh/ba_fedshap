@@ -1,14 +1,35 @@
 {
+  "_note": "Raw per-cell full_eval.json files for the 13 executed cells (5 seeds x alpha in {0.10, 0.50, 1.00}, minus seed=789/alpha=1.0 and seed=1024/alpha=1.0 which are deferred) are archived at https://doi.org/10.5281/zenodo.20356218. The GitHub release asset compas_raw_results.zip (v1.0.0-softx) was removed: it contained only two schema-incompatible partial result files for already-executed cells and did not represent the 13-cell corpus.",
   "results/processed/manuscript_values.json": {
     "sha256": "eef841351c122dfd976ba60ecc4f787b30a45f0b9a8a09aa8cdb6ff364fda137",
     "size_bytes": 4997
   },
-  "results/raw/compas/seed_1024/alpha_0.50/results.json": {
-    "sha256": "45ddcc2c02f188d9e63d24544136c4ffaf54c88884d1d850b3a106e81843e494",
-    "size_bytes": 1351
+  "results/tables/table_iv_primary_reliability.csv": {
+    "sha256": "ff0701ce2c56359c0ed98d39197d95f7f2b2811bc45fe4449c91181319fe0421",
+    "size_bytes": 672
   },
-  "results/raw/compas/seed_789/alpha_0.50/results.json": {
-    "sha256": "cabbad47d1cef4bb3242012417c85476c8f260f5ec986c10e6b6fe194c50ab0d",
-    "size_bytes": 1350
+  "results/tables/table_ix_lipschitz.csv": {
+    "sha256": "24a901b9d4918de637e97257063bc46bc51ba3242eed312e96b07eda98436ef8",
+    "size_bytes": 166
+  },
+  "results/tables/table_v_faithfulness.csv": {
+    "sha256": "528d8b4ae2a09cacf030921f694d28de53078709a3cbfef5b66757e9cf3017b1",
+    "size_bytes": 268
+  },
+  "results/tables/table_vi_ablation.csv": {
+    "sha256": "94f76ad41ef571684153698ad11886c81c205133031feab557f7e5c418b1a254",
+    "size_bytes": 317
+  },
+  "results/tables/table_vii_dp_noise.csv": {
+    "sha256": "6dffdb1f9a6c39ff3865eddac5a9feffd3d2ffeaf1b2bb68d22aba215871c689",
+    "size_bytes": 286
+  },
+  "results/tables/table_viii_adi_outcome_correlation.csv": {
+    "sha256": "93ed189d1d08f2c23e11e2c9ff9c59d2106f015364796a4c5847ae1e178cb3d3",
+    "size_bytes": 176
+  },
+  "results/tables/table_x_runtime.csv": {
+    "sha256": "147d85cd4f33f566a68562c202c814efcc14303c7b34ba7199a0b741a752538e",
+    "size_bytes": 138
   }
 }

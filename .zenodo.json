@@ -1,5 +1,6 @@
 {
   "title": "BA-FedSHAP: Background-Anchored Federated Shapley Attributions for Auditable AI",
+  "doi": "10.5281/zenodo.20356218",
   "description": "Reference implementation and raw experimental results for the SoftwareX article: BA-FedSHAP — Background-Anchored Federated Shapley Attributions for Auditable AI. Includes the full BA-FedSHAP protocol (Algorithms 1–3), six comparison baselines, faithfulness metrics, RDP privacy accounting, and reproducible results on COMPAS, Adult, German Credit, Bank Marketing, ACSIncome, and ACSPublicCoverage.",
   "creators": [
     {
