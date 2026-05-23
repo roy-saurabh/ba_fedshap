@@ -1,0 +1,56 @@
+{
+  "dataset": "compas",
+  "seed": 789,
+  "alpha": 0.5,
+  "n_features": 13,
+  "n_clients": 10,
+  "fl_rounds": 10,
+  "eval_accuracy": 0.6590998140696582,
+  "ba_fedshap": {
+    "inf": {
+      "adi_norm": 13.60149696528777,
+      "n_clients_used": 10,
+      "outlier_clients": [],
+      "runtime_s": 255.7245590686798
+    },
+    "8": {
+      "adi_norm": 33.52741369381166,
+      "n_clients_used": 10,
+      "outlier_clients": [],
+      "runtime_s": 251.68886804580688
+    },
+    "4": {
+      "adi_norm": 33.23445025127898,
+      "n_clients_used": 10,
+      "outlier_clients": [],
+      "runtime_s": 279.03277015686035
+    },
+    "2": {
+      "adi_norm": 33.064900325648104,
+      "n_clients_used": 10,
+      "outlier_clients": [],
+      "runtime_s": 296.4834358692169
+    },
+    "1": {
+      "adi_norm": 32.972601386034384,
+      "n_clients_used": 10,
+      "outlier_clients": [],
+      "runtime_s": 348.5160219669342
+    }
+  },
+  "baselines": {
+    "centralized_oracle": {
+      "shap_mean_abs_norm": 0.01832941360771656,
+      "runtime_s": 42.64206790924072
+    },
+    "naive_aggregated": {
+      "shap_mean_abs_norm": 0.018191741779446602,
+      "runtime_s": 423.86149311065674
+    },
+    "shared_background": {
+      "shap_mean_abs_norm": 0.01812341995537281,
+      "runtime_s": 45.20681190490723
+    }
+  },
+  "total_runtime_s": 1951.4185450077057
+}

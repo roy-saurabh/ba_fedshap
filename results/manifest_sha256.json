@@ -1,0 +1,14 @@
+{
+  "results/processed/manuscript_values.json": {
+    "sha256": "eef841351c122dfd976ba60ecc4f787b30a45f0b9a8a09aa8cdb6ff364fda137",
+    "size_bytes": 4997
+  },
+  "results/raw/compas/seed_1024/alpha_0.50/results.json": {
+    "sha256": "45ddcc2c02f188d9e63d24544136c4ffaf54c88884d1d850b3a106e81843e494",
+    "size_bytes": 1351
+  },
+  "results/raw/compas/seed_789/alpha_0.50/results.json": {
+    "sha256": "cabbad47d1cef4bb3242012417c85476c8f260f5ec986c10e6b6fe194c50ab0d",
+    "size_bytes": 1350
+  }
+}
