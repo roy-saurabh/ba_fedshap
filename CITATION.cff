@@ -8,7 +8,7 @@ authors:
   - family-names: Saurabh
     given-names: Roy
 license: MIT
-repository-code: "https://github.com/roysaurabh/ba_fedshap"
+repository-code: "https://github.com/roy-saurabh/ba_fedshap"
 keywords:
   - federated learning
   - SHAP
