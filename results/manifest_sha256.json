@@ -25,11 +25,15 @@
     "size_bytes": 286
   },
   "results/tables/table_viii_adi_outcome_correlation.csv": {
-    "sha256": "93ed189d1d08f2c23e11e2c9106f015364796a4c5847ae1e178cb3d3",
+    "sha256": "93ed189d1d08f2c23e11e2c9ff9c59d2106f015364796a4c5847ae1e178cb3d3",
     "size_bytes": 176
   },
   "results/tables/table_x_runtime.csv": {
     "sha256": "147d85cd4f33f566a68562c202c814efcc14303c7b34ba7199a0b741a752538e",
     "size_bytes": 138
+  },
+  "notebooks/BA_FedSHAP_SoftwareX_reproducer.ipynb": {
+    "sha256": "eecad555b135887920fc9d82e886b453ecd9ff5ab303f074e239bef2155fcb9d",
+    "size_bytes": 10109
   }
 }

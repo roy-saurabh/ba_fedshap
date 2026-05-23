@@ -165,8 +165,8 @@ The manuscript reports the following aggregate means across 15 cells (5 seeds ×
 | k-means background |  0.0373 | 0.7993 |         0.7943 |
 | BA-FedSHAP ε=∞     |  0.0243 | 0.5029 |        12.5355 |
 | BA-FedSHAP ε=8     |  0.3353 | 0.0678 |        92.2070 |
-| BA-FedSHAP ε=4     |  0.5760 | 0.0220 |       219.5000 |
-| BA-FedSHAP ε=2     |  1.2110 | 0.0490 |       234.9000 |
+| BA-FedSHAP ε=4     |  0.6270 | 0.0626 |        97.0423 |
+| BA-FedSHAP ε=2     |  1.2051 | 0.0597 |       102.3291 |
 | BA-FedSHAP ε=1     |  2.3597 | 0.0458 |       106.2784 |
 
 These values are verifiable from `compas_aggregate.json` in the Zenodo archive.
