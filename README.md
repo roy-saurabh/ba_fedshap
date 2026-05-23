@@ -58,13 +58,14 @@ ba_fedshap/
 │   ├── run_dp_sweep.py             # DP noise sensitivity sweep
 │   ├── run_faithfulness.py         # Faithfulness/sanity metrics
 │   ├── run_stability.py            # Lipschitz stability
-│   ├── make_softx_compas_table.py  # COMPAS Table 1 from full_eval.json files
+│   ├── make_softx_table1.py        # COMPAS Table 1 from full_eval.json files (canonical)
 │   ├── make_paper_tables.py        # All manuscript tables (IV–X) from full_eval.json
 │   ├── make_tables.py              # LEGACY — reads results.json, not full_eval.json
 │   └── make_figures.py             # Generate paper figures
 ├── notebooks/
 │   └── BA_FedSHAP_SoftwareX_reproducer.ipynb  # Google Colab end-to-end reproducer
 ├── results/
+│   ├── tables/                     # NOTE: CSVs here are from an earlier multi-dataset analysis pass and differ from SoftwareX Table 1; Table 1 values come from compas_aggregate.json in the Zenodo archive.
 │   └── manifest_sha256.json        # SHA-256 manifest (in-repo + Zenodo scope)
 ├── reports/                        # Audit reports (environment, datasets, statistics)
 ├── pyproject.toml
@@ -144,9 +145,7 @@ To reproduce Table 1 from the pre-computed raw results without re-running experi
 # After downloading and extracting compas_raw_results.zip to results/raw/compas/
 
 # Option A — COMPAS Table 1 only (matches SoftwareX Table 1 exactly):
-python scripts/make_softx_compas_table.py \
-  --input results/raw/compas \
-  --output results/tables/table1_compas_aggregate.csv
+python scripts/make_softx_table1.py
 
 # Option B — all manuscript tables (IV–X) for all datasets:
 python scripts/make_paper_tables.py
