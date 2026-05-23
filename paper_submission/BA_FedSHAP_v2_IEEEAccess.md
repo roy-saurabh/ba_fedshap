@@ -50,7 +50,7 @@ Federated explainability is less mature than federated optimization. We compare 
 
 * Naive aggregated SHAP — local KernelSHAP per client, with client-level means averaged at the server. No background alignment.
 
-* Shared-background SHAP — KernelSHAP using a shared background constructed from a public reference split (Folktables audit split / dataset-standard test split), without group conditioning.
+* Shared-background SHAP \[15\] — KernelSHAP using a shared background constructed from a public reference split (Folktables audit split / dataset-standard test split), without group conditioning.
 
 * k-means federated background SHAP — KernelSHAP using a k-means compressed background built from client samples, in the spirit of background synthesis approaches discussed in the federated XAI literature \[10\] (re-implemented here from published descriptions; no group conditioning, no drift diagnostics, no DP).
 
@@ -66,7 +66,7 @@ Agarwal et al. \[51\] establish a reductions framework for fair classification. 
 
 ## **D. Faithfulness, Sanity, and Adversarial Manipulation**
 
-Stability is not correctness: an attribution method can be stable yet weakly coupled to the trained model. Adebayo et al. \[54\] propose parameter- and label-randomization sanity checks. Hooker et al. \[55\] introduce ROAR; Rong et al. \[56\] introduce ROAD as a consistent alternative. Slack et al. \[57\] show that SHAP and LIME can be adversarially scaffolded so that explanations look innocuous on perturbed inputs while a discriminatory rule operates on natural data. We treat faithfulness and sanity as first-class evaluations and report attribution-manipulation robustness under the threat models of Section VI.
+Stability is not correctness: an attribution method can be stable yet weakly coupled to the trained model. Adebayo et al. \[54\] propose parameter- and label-randomization sanity checks. Hooker et al. \[55\] introduce ROAR; Rong et al. \[56\] introduce ROAD as a consistent alternative. Slack et al. \[57\] show that SHAP and LIME \[14\] can be adversarially scaffolded so that explanations look innocuous on perturbed inputs while a discriminatory rule operates on natural data. We treat faithfulness and sanity as first-class evaluations and report attribution-manipulation robustness under the threat models of Section VI.
 
 # **III. PROBLEM FORMULATION**
 
@@ -215,7 +215,7 @@ We retain four standard tabular fairness benchmarks plus the two ACS / Folktable
 
 ## **B. Baselines and Configurations**
 
-We evaluate the following baselines: (1) Centralized oracle SHAP — KernelSHAP on pooled training data, same global model. (2) Local SHAP — KernelSHAP at each client, local data as background. (3) Naive aggregated SHAP — local SHAP, mean of client-level means at the server. (4) Shared-background SHAP — KernelSHAP using the reference / audit-split background of Algorithm 3 but without group conditioning. (5) k-means federated background SHAP — KernelSHAP with a k-means compressed shared background (k \= K\_global), without drift diagnostics or DP. (6) Gradient-based federated attribution — GradientSHAP \[13\] under the same shared baseline. (7) BA-FedSHAP — the proposed protocol, evaluated at ε ∈ {1, 4, ∞}. All baselines use the same FedAvg-trained global model f\_θ and the same evaluation pipeline; configurations are pinned in configs/ in the reproducibility package.
+We evaluate the following baselines: (1) Centralized oracle SHAP — KernelSHAP on pooled training data, same global model. (2) Local SHAP — KernelSHAP at each client, local data as background. (3) Naive aggregated SHAP — local SHAP, mean of client-level means at the server. (4) Shared-background SHAP \[15\] — KernelSHAP using the reference / audit-split background of Algorithm 3 but without group conditioning. (5) k-means federated background SHAP — KernelSHAP with a k-means compressed shared background (k \= K\_global), without drift diagnostics or DP. (6) Gradient-based federated attribution — GradientSHAP \[13\] under the same shared baseline. (7) BA-FedSHAP — the proposed protocol, evaluated at ε ∈ {1, 4, ∞}. All baselines use the same FedAvg-trained global model f\_θ and the same evaluation pipeline; configurations are pinned in configs/ in the reproducibility package.
 
 ## **C. Configuration Parameters**
 

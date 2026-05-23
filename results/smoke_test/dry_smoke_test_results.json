@@ -1,0 +1,27 @@
+{
+  "overall": "FAIL",
+  "n_checks": 3,
+  "n_pass": 2,
+  "n_fail": 1,
+  "n_skip": 0,
+  "total_elapsed_s": 224.76,
+  "note": "Checks marked SKIP require torch==2.1.0, shap==0.44.0, flwr==1.5.0 in the pinned conda environment (see environment.yml).",
+  "checks": {
+    "optional_imports": {
+      "status": "PASS",
+      "elapsed_s": 0.0,
+      "value": "torch=2.1.0, shap=0.44.0, flwr=1.5.0"
+    },
+    "core_deps": {
+      "status": "PASS",
+      "elapsed_s": 0.0,
+      "value": "numpy=1.26.4, pandas=2.3.3, scipy=1.15.3, sklearn=1.8.0"
+    },
+    "adult_data_loading": {
+      "status": "FAIL",
+      "elapsed_s": 216.409,
+      "error": "HTTP Error 504: Gateway Time-out",
+      "traceback": "           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/Cellar/python@3.11/3.11.13/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py\", line 496, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/usr/local/Cellar/python@3.11/3.11.13/Frameworks/Python.framework/Versions/3.11/lib/python3.11/urllib/request.py\", line 643, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 504: Gateway Time-out\n"
+    }
+  }
+}

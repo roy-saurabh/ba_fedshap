@@ -52,35 +52,35 @@ git commit -m "feat: add COMPAS raw results for seeds 789 and 1024, SHA-256 mani
 
 echo ""
 echo "=== Step 5: Tag release ==="
-git tag -a v1.0.0-softx -m "SoftwareX submission v1.0.0 — BA-FedSHAP reference implementation"
+git tag -a v1.0.1-softx -m "SoftwareX submission v1.0.1 — BA-FedSHAP reference implementation"
 
 echo ""
 echo "=== Step 6: Push to GitHub ==="
-echo "  (requires: gh repo create roysaurabh/ba_fedshap --public --source=. --remote=origin --push)"
+echo "  (requires: gh repo create roy-saurabh/ba_fedshap --public --source=. --remote=origin --push)"
 read -p "  GitHub repo ready? (y/N): " yn
 if [[ "$yn" != "y" && "$yn" != "Y" ]]; then
     echo "  Skipping push. Run manually when ready."
-    echo "    gh repo create roysaurabh/ba_fedshap --public --source=. --remote=origin --push"
-    echo "    git push origin v1.0.0-softx"
+    echo "    gh repo create roy-saurabh/ba_fedshap --public --source=. --remote=origin --push"
+    echo "    git push origin v1.0.1-softx"
     exit 0
 fi
 git push -u origin main
-git push origin v1.0.0-softx
+git push origin v1.0.1-softx
 
 echo ""
 echo "=== Step 7: Create GitHub release ==="
-gh release create v1.0.0-softx \
-    --title "v1.0.0-softx — BA-FedSHAP SoftwareX Reference Release" \
+gh release create v1.0.1-softx \
+    --title "v1.0.1-softx — BA-FedSHAP SoftwareX Reference Release" \
     --notes "$(cat <<'NOTES'
-## BA-FedSHAP v1.0.0-softx
+## BA-FedSHAP v1.0.1-softx
 
 Reference implementation for the SoftwareX article:
-> Roy Saurabh. "BA-FedSHAP: Background-Anchored Federated Shapley Attributions for Auditable AI." *SoftwareX*, 2025.
+> Roy Saurabh. "BA-FedSHAP: Stabilizing Removal-Based Shapley Attributions for Federated Bias Auditing under Non-IID Data." *SoftwareX*, 2026.
 
 ### Contents
 - Full BA-FedSHAP protocol (Algorithms 1–3) with RDP accounting and six baselines
 - Low-compute COMPAS study reproducer (`configs/compas_lowcompute_softx.yaml`)
-- `compas_raw_results.zip` — per-seed raw JSON outputs (seeds 789, 1024) for SoftwareX reviewer reproduction
+- `compas_raw_results.zip` — 15-cell raw JSON corpus (5 seeds × 3 α levels), SHA-256: 378a6c5b91c2a760aacb6a88b4ebab48b69f3491468375067545f264d88186bb
 - SHA-256 manifest at `results/manifest_sha256.json`
 
 ### Reproduce SoftwareX COMPAS study (~20 min, CPU)
@@ -90,14 +90,14 @@ python scripts/make_tables.py --table iv
 \`\`\`
 
 ### Zenodo DOI
-A permanent DOI will be assigned by Zenodo automatically via the GitHub integration.
+Permanently archived at https://doi.org/10.5281/zenodo.20356218
 NOTES
 )" \
     compas_raw_results.zip
 
 echo ""
 echo "=== Done ==="
-echo "Next step: Trigger Zenodo DOI via https://zenodo.org/account/settings/github/"
+echo "Next step: Trigger Zenodo new version via https://zenodo.org/account/settings/github/"
 echo "  1. Connect your GitHub account to Zenodo"
-echo "  2. Enable the roysaurabh/ba_fedshap repository"
-echo "  3. Zenodo will auto-create a DOI for the v1.0.0-softx release"
+echo "  2. Enable the roy-saurabh/ba_fedshap repository"
+echo "  3. Zenodo will auto-create a new version for the v1.0.1-softx release"
