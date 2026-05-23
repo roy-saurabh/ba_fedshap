@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "title": "BA-FedSHAP: A reproducible toolkit for auditing background-induced attribution drift in federated SHAP explanations",
+    "description": "Open-source Python toolkit for federated SHAP attribution auditing under non-IID partitioning and differential-privacy release. Bundles six fairness datasets, six baseline methods, audit metrics with bootstrap CIs and permutation p-values, and Rényi-DP accounting. Includes a reproducible 15-cell COMPAS low-compute demonstration (configs/compas_lowcompute_softx.yaml; 5 seeds × 3 Dirichlet alpha levels) at the SoftwareX submission. The toolkit is positioned as a diagnostic framework, not as a method that empirically dominates simpler baselines.",
+    "version": "v1.0.1-softx",
+    "related_identifiers": [
+      {
+        "relation": "isSupplementTo",
+        "identifier": "10.1016/j.softx.2025.XXXXXX",
+        "scheme": "doi"
+      },
+      {
+        "relation": "isIdenticalTo",
+        "identifier": "https://github.com/roy-saurabh/ba_fedshap/releases/tag/v1.0.1-softx",
+        "scheme": "url"
+      }
+    ]
+  }
+}
