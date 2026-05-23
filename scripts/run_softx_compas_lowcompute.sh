@@ -22,4 +22,6 @@ for SEED in 42 123 456 789 1024; do
   done
 done
 
-echo "Done. Aggregate with: python scripts/make_tables.py --results-dir results/raw --output results/tables/"
+echo "Done. Generate Table 1 with:"
+echo "  python scripts/make_softx_compas_table.py --input results/raw/compas --output results/tables/table1_compas_aggregate.csv"
+echo "Or all manuscript tables with: python scripts/make_paper_tables.py"

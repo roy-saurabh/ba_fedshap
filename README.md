@@ -58,8 +58,12 @@ ba_fedshap/
 │   ├── run_dp_sweep.py             # DP noise sensitivity sweep
 │   ├── run_faithfulness.py         # Faithfulness/sanity metrics
 │   ├── run_stability.py            # Lipschitz stability
-│   ├── make_tables.py              # Aggregate results → CSV/LaTeX
+│   ├── make_softx_compas_table.py  # COMPAS Table 1 from full_eval.json files
+│   ├── make_paper_tables.py        # All manuscript tables (IV–X) from full_eval.json
+│   ├── make_tables.py              # LEGACY — reads results.json, not full_eval.json
 │   └── make_figures.py             # Generate paper figures
+├── notebooks/
+│   └── BA_FedSHAP_SoftwareX_reproducer.ipynb  # Google Colab end-to-end reproducer
 ├── results/
 │   └── manifest_sha256.json        # SHA-256 manifest (in-repo + Zenodo scope)
 ├── reports/                        # Audit reports (environment, datasets, statistics)
@@ -137,8 +141,15 @@ The Zenodo archive contains `compas_raw_results.zip` with all 15 cells, SHA-256:
 To reproduce Table 1 from the pre-computed raw results without re-running experiments:
 
 ```bash
-# After downloading and extracting compas_raw_results.zip to results/raw/
-python scripts/make_tables.py --results-dir results/raw --output results/tables/
+# After downloading and extracting compas_raw_results.zip to results/raw/compas/
+
+# Option A — COMPAS Table 1 only (matches SoftwareX Table 1 exactly):
+python scripts/make_softx_compas_table.py \
+  --input results/raw/compas \
+  --output results/tables/table1_compas_aggregate.csv
+
+# Option B — all manuscript tables (IV–X) for all datasets:
+python scripts/make_paper_tables.py
 ```
 
 ---
@@ -155,6 +166,8 @@ The manuscript reports the following aggregate means across 15 cells (5 seeds ×
 | k-means background |  0.0373 | 0.7993 |         0.7943 |
 | BA-FedSHAP ε=∞     |  0.0243 | 0.5029 |        12.5355 |
 | BA-FedSHAP ε=8     |  0.3353 | 0.0678 |        92.2070 |
+| BA-FedSHAP ε=4     |  0.5760 | 0.0220 |       219.5000 |
+| BA-FedSHAP ε=2     |  1.2110 | 0.0490 |       234.9000 |
 | BA-FedSHAP ε=1     |  2.3597 | 0.0458 |       106.2784 |
 
 These values are verifiable from `compas_aggregate.json` in the Zenodo archive.
@@ -163,7 +176,9 @@ These values are verifiable from `compas_aggregate.json` in the Zenodo archive.
 
 ## Full-scale experiments
 
-The full-scale config (`configs/compas.yaml`) uses `n_clients=50`, `fl_rounds=200`, `kernelshap_coalitions=2048`, and all five α levels. It requires significant compute (GPU recommended). The full raw result corpus is also archived on Zenodo.
+The full-scale config (`configs/compas.yaml`) uses `n_clients=50`, `fl_rounds=200`, `kernelshap_coalitions=2048`, and all five α levels. It requires significant compute (GPU recommended).
+
+The low-compute COMPAS raw result corpus used in the SoftwareX manuscript is archived on Zenodo. Full-scale runs can be generated with `configs/compas.yaml` but are not required for the SoftwareX demonstration.
 
 ---
 

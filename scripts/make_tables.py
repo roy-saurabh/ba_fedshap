@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# LEGACY — reads results.json (old format). The current pipeline writes full_eval.json.
+# Use make_paper_tables.py (all tables) or make_softx_compas_table.py (Table 1) instead.
 """Aggregate raw results into paper tables.
 
 Reads all results/raw/{dataset}/seed_*/alpha_*/results.json files,
