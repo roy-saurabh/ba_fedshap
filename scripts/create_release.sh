@@ -83,10 +83,10 @@ Reference implementation for the SoftwareX article:
 - `compas_raw_results.zip` — 15-cell raw JSON corpus (5 seeds × 3 α levels), SHA-256: 378a6c5b91c2a760aacb6a88b4ebab48b69f3491468375067545f264d88186bb
 - SHA-256 manifest at `results/manifest_sha256.json`
 
-### Reproduce SoftwareX COMPAS study (~20 min, CPU)
+### Reproduce SoftwareX COMPAS study (~2 CPU-hours)
 \`\`\`bash
-python scripts/run_experiment.py --config configs/compas_lowcompute_softx.yaml --seeds 42 123 456 789 1024
-python scripts/make_tables.py --table iv
+bash scripts/run_softx_compas_lowcompute.sh
+python scripts/make_softx_table1.py
 \`\`\`
 
 ### Zenodo DOI

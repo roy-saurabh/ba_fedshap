@@ -52,7 +52,7 @@ done
 echo "========================================"
 echo "Generating tables..."
 echo "========================================"
-python scripts/make_tables.py 2>&1 | tee "$LOGDIR/make_tables.log"
+python scripts/make_paper_tables.py 2>&1 | tee "$LOGDIR/make_tables.log"
 
 echo "========================================"
 echo "Generating figures..."
